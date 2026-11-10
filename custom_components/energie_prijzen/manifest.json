@@ -1,13 +1,13 @@
 {
   "domain": "energie_prijzen",
   "name": "Energie Prijzen",
-  "codeowners": ["@nxtw"],
+  "codeowners": ["@bazzie"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/nxtw/energie_prijzen",
+  "documentation": "https://github.com/bazzie/energie_prijzen",
   "integration_type": "service",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/nxtw/energie_prijzen/issues",
+  "issue_tracker": "https://github.com/bazzie/energie_prijzen/issues",
   "requirements": [],
   "single_config_entry": true,
   "version": "1.0.0"

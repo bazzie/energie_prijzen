@@ -1,0 +1,41 @@
+[project]
+name = "energie-prijzen"
+version = "1.0.0"
+description = "Home Assistant custom integration: dynamische Vattenfall-prijzen via EnergyZero"
+requires-python = ">=3.14"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 88
+
+[tool.ruff.lint]
+# Rule set modelled after Home Assistant core.
+select = [
+    "A", "ASYNC", "B", "BLE", "C4", "D", "DTZ", "E", "F", "FLY", "FURB", "G",
+    "I", "ICN", "LOG", "N", "PERF", "PGH", "PIE", "PL", "PT", "PYI", "RET", "RSE",
+    "RUF", "S", "SIM", "SLF", "T20", "TID", "TRY", "UP", "W",
+]
+ignore = [
+    "D202",    # no blank lines allowed after function docstring
+    "D203",    # incompatible with D211
+    "D213",    # incompatible with D212
+    "E501",    # line length is handled by the formatter
+    "PLR2004", # magic values (tests)
+    "PLR0913", # too many arguments
+    "S311",    # random is only used for request jitter
+    "TRY003",  # long exception messages
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "SLF001"]
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+known-first-party = ["custom_components"]
+known-third-party = ["homeassistant"]
+combine-as-imports = true

@@ -1,0 +1,115 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dynamische energieprijzen",
+        "description": "Vul de onderdelen van je dynamische Vattenfall-contract in. Alle bedragen zijn exclusief btw. De all-in prijs is (marktprijs + opslag + energiebelasting) × (1 + btw). De energiebelasting kan automatisch uit de prijsbron worden bepaald.",
+        "data": {
+          "electricity_surcharge": "Opslag stroom (EUR/kWh)",
+          "gas_surcharge": "Opslag gas (EUR/m³)",
+          "energy_tax_auto": "Energiebelasting automatisch bepalen",
+          "electricity_energy_tax": "Energiebelasting stroom (EUR/kWh)",
+          "gas_energy_tax": "Energiebelasting gas (EUR/m³)",
+          "vat_percentage": "Btw (%)"
+        },
+        "data_description": {
+          "electricity_surcharge": "Opslag van de leverancier per kWh, exclusief btw.",
+          "gas_surcharge": "Opslag van de leverancier per m³, exclusief btw.",
+          "energy_tax_auto": "Gebruik de energiebelasting van de prijsbron (EnergyZero: all-in prijs min marktprijs). De handmatige waarden hieronder dienen als terugval.",
+          "electricity_energy_tax": "Energiebelasting per kWh, exclusief btw. Verplicht als automatisch uit staat, anders optionele terugval.",
+          "gas_energy_tax": "Energiebelasting per m³, exclusief btw. Verplicht als automatisch uit staat, anders optionele terugval.",
+          "vat_percentage": "Btw-percentage dat over het totaal wordt berekend."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kan geen prijzen ophalen bij de prijsbron. Probeer het later opnieuw.",
+      "energy_tax_required": "Vul de energiebelasting voor stroom en gas in, of zet automatische energiebelasting aan.",
+      "energy_tax_unavailable": "De prijsbron levert geen energiebelasting. Vul deze handmatig in."
+    },
+    "abort": {
+      "already_configured": "Deze integratie is al geconfigureerd.",
+      "single_instance_allowed": "Er is maar één configuratie toegestaan."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Contractinstellingen",
+        "description": "Pas de onderdelen van de prijsberekening aan. Alle bedragen zijn exclusief btw. De energiebelasting kan automatisch uit de prijsbron worden bepaald.",
+        "data": {
+          "electricity_surcharge": "Opslag stroom (EUR/kWh)",
+          "gas_surcharge": "Opslag gas (EUR/m³)",
+          "energy_tax_auto": "Energiebelasting automatisch bepalen",
+          "electricity_energy_tax": "Energiebelasting stroom (EUR/kWh)",
+          "gas_energy_tax": "Energiebelasting gas (EUR/m³)",
+          "vat_percentage": "Btw (%)"
+        },
+        "data_description": {
+          "electricity_surcharge": "Opslag van de leverancier per kWh, exclusief btw.",
+          "gas_surcharge": "Opslag van de leverancier per m³, exclusief btw.",
+          "energy_tax_auto": "Gebruik de energiebelasting van de prijsbron (EnergyZero: all-in prijs min marktprijs). De handmatige waarden hieronder dienen als terugval.",
+          "electricity_energy_tax": "Energiebelasting per kWh, exclusief btw. Verplicht als automatisch uit staat, anders optionele terugval.",
+          "gas_energy_tax": "Energiebelasting per m³, exclusief btw. Verplicht als automatisch uit staat, anders optionele terugval.",
+          "vat_percentage": "Btw-percentage dat over het totaal wordt berekend."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kan geen prijzen ophalen bij de prijsbron. Probeer het later opnieuw.",
+      "energy_tax_required": "Vul de energiebelasting voor stroom en gas in, of zet automatische energiebelasting aan.",
+      "energy_tax_unavailable": "De prijsbron levert geen energiebelasting. Vul deze handmatig in."
+    }
+  },
+  "device": {
+    "electricity": {
+      "name": "Dynamische stroom"
+    },
+    "gas": {
+      "name": "Dynamisch gas"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "current_price": {
+        "name": "Huidige prijs"
+      },
+      "next_price": {
+        "name": "Volgende prijs"
+      },
+      "average_today": {
+        "name": "Gemiddelde prijs vandaag"
+      },
+      "lowest_today": {
+        "name": "Laagste prijs vandaag"
+      },
+      "highest_today": {
+        "name": "Hoogste prijs vandaag"
+      },
+      "cheapest_time_today": {
+        "name": "Goedkoopste moment vandaag"
+      },
+      "most_expensive_time_today": {
+        "name": "Duurste moment vandaag"
+      },
+      "market_price": {
+        "name": "Marktprijs incl. btw"
+      },
+      "gas_current_price": {
+        "name": "Huidige gasprijs"
+      },
+      "gas_next_price": {
+        "name": "Volgende gasprijs"
+      },
+      "gas_market_price": {
+        "name": "Marktprijs gas incl. btw"
+      },
+      "energy_tax": {
+        "name": "Energiebelasting incl. btw"
+      },
+      "gas_energy_tax": {
+        "name": "Energiebelasting gas incl. btw"
+      }
+    }
+  }
+}

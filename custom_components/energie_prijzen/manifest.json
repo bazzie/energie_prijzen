@@ -1,0 +1,14 @@
+{
+  "domain": "energie_prijzen",
+  "name": "Energie Prijzen",
+  "codeowners": ["@nxtw"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/nxtw/energie_prijzen",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/nxtw/energie_prijzen/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "1.0.0"
+}

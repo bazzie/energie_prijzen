@@ -1,0 +1,115 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dynamic energy prices",
+        "description": "Enter the components of your dynamic Vattenfall contract. All amounts are excluding VAT. The all-in price is (market price + surcharge + energy tax) × (1 + VAT). The energy tax can be determined automatically from the price source.",
+        "data": {
+          "electricity_surcharge": "Electricity surcharge (EUR/kWh)",
+          "gas_surcharge": "Gas surcharge (EUR/m³)",
+          "energy_tax_auto": "Determine energy tax automatically",
+          "electricity_energy_tax": "Electricity energy tax (EUR/kWh)",
+          "gas_energy_tax": "Gas energy tax (EUR/m³)",
+          "vat_percentage": "VAT (%)"
+        },
+        "data_description": {
+          "electricity_surcharge": "Supplier surcharge per kWh, excluding VAT.",
+          "gas_surcharge": "Supplier surcharge per m³, excluding VAT.",
+          "energy_tax_auto": "Use the energy tax supplied by the price source (EnergyZero: all-in price minus market price). The manual values below are used as fallback.",
+          "electricity_energy_tax": "Energy tax per kWh, excluding VAT. Required when automatic is off; otherwise optional fallback.",
+          "gas_energy_tax": "Energy tax per m³, excluding VAT. Required when automatic is off; otherwise optional fallback.",
+          "vat_percentage": "VAT percentage applied to the total."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not retrieve prices from the price source. Try again later.",
+      "energy_tax_required": "Enter the energy tax for electricity and gas, or enable automatic energy tax.",
+      "energy_tax_unavailable": "The price source does not provide the energy tax. Enter it manually."
+    },
+    "abort": {
+      "already_configured": "This integration is already configured.",
+      "single_instance_allowed": "Only one configuration is allowed."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Contract settings",
+        "description": "Change the components of the price calculation. All amounts are excluding VAT. The energy tax can be determined automatically from the price source.",
+        "data": {
+          "electricity_surcharge": "Electricity surcharge (EUR/kWh)",
+          "gas_surcharge": "Gas surcharge (EUR/m³)",
+          "energy_tax_auto": "Determine energy tax automatically",
+          "electricity_energy_tax": "Electricity energy tax (EUR/kWh)",
+          "gas_energy_tax": "Gas energy tax (EUR/m³)",
+          "vat_percentage": "VAT (%)"
+        },
+        "data_description": {
+          "electricity_surcharge": "Supplier surcharge per kWh, excluding VAT.",
+          "gas_surcharge": "Supplier surcharge per m³, excluding VAT.",
+          "energy_tax_auto": "Use the energy tax supplied by the price source (EnergyZero: all-in price minus market price). The manual values below are used as fallback.",
+          "electricity_energy_tax": "Energy tax per kWh, excluding VAT. Required when automatic is off; otherwise optional fallback.",
+          "gas_energy_tax": "Energy tax per m³, excluding VAT. Required when automatic is off; otherwise optional fallback.",
+          "vat_percentage": "VAT percentage applied to the total."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not retrieve prices from the price source. Try again later.",
+      "energy_tax_required": "Enter the energy tax for electricity and gas, or enable automatic energy tax.",
+      "energy_tax_unavailable": "The price source does not provide the energy tax. Enter it manually."
+    }
+  },
+  "device": {
+    "electricity": {
+      "name": "Dynamic electricity"
+    },
+    "gas": {
+      "name": "Dynamic gas"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "current_price": {
+        "name": "Current price"
+      },
+      "next_price": {
+        "name": "Next price"
+      },
+      "average_today": {
+        "name": "Average price today"
+      },
+      "lowest_today": {
+        "name": "Lowest price today"
+      },
+      "highest_today": {
+        "name": "Highest price today"
+      },
+      "cheapest_time_today": {
+        "name": "Cheapest moment today"
+      },
+      "most_expensive_time_today": {
+        "name": "Most expensive moment today"
+      },
+      "market_price": {
+        "name": "Market price incl. VAT"
+      },
+      "gas_current_price": {
+        "name": "Current gas price"
+      },
+      "gas_next_price": {
+        "name": "Next gas price"
+      },
+      "gas_market_price": {
+        "name": "Gas market price incl. VAT"
+      },
+      "energy_tax": {
+        "name": "Energy tax incl. VAT"
+      },
+      "gas_energy_tax": {
+        "name": "Gas energy tax incl. VAT"
+      }
+    }
+  }
+}

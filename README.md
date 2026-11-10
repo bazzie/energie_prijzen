@@ -1,5 +1,7 @@
 # Energie Prijzen (dynamisch Vattenfall-contract)
 
+[![Tests](https://github.com/bazzie/energie_prijzen/actions/workflows/tests.yml/badge.svg)](https://github.com/bazzie/energie_prijzen/actions/workflows/tests.yml)
+
 Home Assistant custom integration die de dynamische stroom- en gasprijzen ophaalt
 en omrekent naar de **all-in prijs** van een dynamisch energiecontract van
 Vattenfall in Nederland.
